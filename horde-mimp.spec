@@ -47,8 +47,7 @@ cat > %{buildroot}%{_sysconfdir}/horde/registry.d/%{module}.php <<EOF
     'fileroot' => \$this->applications['horde']['fileroot'] . '/mimp',
     'webroot'  => \$this->applications['horde']['webroot'] . '/mimp',
     'name'     => _("Mobile Mail"),
-    'status'   => 'active',
-    'provides' => 'mail'
+    'status'   => 'notoolbar'
 );
 EOF
 
