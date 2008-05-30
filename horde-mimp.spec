@@ -1,6 +1,6 @@
 %define	module	mimp
 %define	name	horde-%{module}
-%define version 1.0.2
+%define version 1.1
 %define release %mkrel 1
 
 %define _requires_exceptions pear(\\(Horde.*\\|Text/Flowed.php\\|VFS.*\\))
@@ -12,7 +12,6 @@ Summary:	The Horde mobile webmail application
 License:	GPL
 Group:		System/Servers
 Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
-Patch0:		%{name}-1.0.2-path.patch
 URL:		http://www.horde.org/%{module}
 Requires(post):	rpm-helper
 Requires:	horde >= 3.0
@@ -28,7 +27,6 @@ a cut down UI suitable for mobile phones and PDAs
 
 %prep
 %setup -q -n %{module}-h3-%{version}
-%patch
 
 %build
 
