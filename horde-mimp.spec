@@ -1,18 +1,18 @@
 %define	module	mimp
 %define	name	horde-%{module}
 %define version 1.1.1
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define _requires_exceptions pear(\\(Horde.*\\|Text/Flowed.php\\|VFS.*\\))
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Summary:	The Horde mobile webmail application
+Summary:	The Horde Mobile Internet Messaging Program
 License:	GPL
 Group:		System/Servers
-Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 URL:		http://www.horde.org/%{module}
+Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
 Requires(post):	rpm-helper
 Requires:	horde >= 3.0
 Requires:	php-imap
@@ -35,15 +35,15 @@ rm -rf %{buildroot}
 
 # horde configuration
 install -d -m 755 %{buildroot}%{_sysconfdir}/horde/registry.d
-cat > %{buildroot}%{_sysconfdir}/horde/registry.d/%{module}.php <<EOF
+cat > %{buildroot}%{_sysconfdir}/horde/registry.d/%{module}.php <<'EOF'
 <?php
 //
 // Mimp Horde configuration file
 //
  
 \$this->applications['mimp'] = array(
-    'fileroot' => \$this->applications['horde']['fileroot'] . '/mimp',
-    'webroot'  => \$this->applications['horde']['webroot'] . '/mimp',
+    'fileroot' => $this->applications['horde']['fileroot'] . '/mimp',
+    'webroot'  => $this->applications['horde']['webroot'] . '/mimp',
     'name'     => _("Mobile Mail"),
     'status'   => 'notoolbar'
 );
