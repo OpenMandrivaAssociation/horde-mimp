@@ -1,7 +1,7 @@
 %define	module	mimp
 %define	name	horde-%{module}
 %define version 1.1.1
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define _requires_exceptions pear(\\(Horde.*\\|Text/Flowed.php\\|VFS.*\\))
 
@@ -41,7 +41,7 @@ cat > %{buildroot}%{_sysconfdir}/horde/registry.d/%{module}.php <<'EOF'
 // Mimp Horde configuration file
 //
  
-\$this->applications['mimp'] = array(
+$this->applications['mimp'] = array(
     'fileroot' => $this->applications['horde']['fileroot'] . '/mimp',
     'webroot'  => $this->applications['horde']['webroot'] . '/mimp',
     'name'     => _("Mobile Mail"),
