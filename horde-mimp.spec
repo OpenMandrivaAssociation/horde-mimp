@@ -1,7 +1,7 @@
 %define	module	mimp
 %define	name	horde-%{module}
 %define version 1.1.3
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define _requires_exceptions pear(\\(Horde.*\\|Text/Flowed.php\\|VFS.*\\))
 
@@ -18,7 +18,6 @@ Requires:	horde >= 3.0
 Requires:	php-imap
 Requires:	php-ldap
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 MIMP is the Mobile IMP, one of the Horde applications.
