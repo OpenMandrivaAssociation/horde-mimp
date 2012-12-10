@@ -126,3 +126,54 @@ fi
 %config(noreplace) %{_sysconfdir}/horde/registry.d/%{module}.php
 %config(noreplace) %{_sysconfdir}/horde/%{module}
 %{_datadir}/horde/%{module}
+
+
+%changelog
+* Tue Aug 03 2010 Thomas Spuhler <tspuhler@mandriva.org> 1.1.3-3mdv2011.0
++ Revision: 565270
+- Increased release for rebuild
+
+* Mon Jan 18 2010 Guillaume Rousse <guillomovitch@mandriva.org> 1.1.3-2mdv2010.1
++ Revision: 493349
+- rely on filetrigger for reloading apache configuration begining with 2010.1, rpm-helper macros otherwise
+
+* Sat Dec 26 2009 Funda Wang <fwang@mandriva.org> 1.1.3-1mdv2010.1
++ Revision: 482414
+- new version 1.1.3
+
+  + Guillaume Rousse <guillomovitch@mandriva.org>
+    - restrict default access permissions to localhost only, as per new policy
+
+* Wed Sep 16 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.1.2-1mdv2010.0
++ Revision: 443652
+- new version
+- new files setup
+
+* Wed Aug 19 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.1.1-3mdv2010.0
++ Revision: 418310
+- fix registry file (fix #52696)
+
+* Sun Oct 19 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.1.1-2mdv2009.1
++ Revision: 295318
+- cosmetics
+
+* Sun Oct 19 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.1.1-1mdv2009.1
++ Revision: 295295
+- update to new version 1.1.1
+
+* Thu Aug 07 2008 Thierry Vignaud <tv@mandriva.org> 1.1-2mdv2009.0
++ Revision: 267076
+- rebuild early 2009.0 package (before pixel changes)
+
+* Fri May 30 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.1-1mdv2009.0
++ Revision: 213378
+- new version
+
+  + Colin Guthrie <cguthrie@mandriva.org>
+    - Better defaults as used in horde registry.
+
+* Fri Mar 07 2008 Colin Guthrie <cguthrie@mandriva.org> 1.0.2-1mdv2008.1
++ Revision: 181171
+- import horde-mimp
+
+
