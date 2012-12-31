@@ -1,18 +1,14 @@
 %define	module	mimp
 %define	name	horde-%{module}
-%define version 1.1.3
-%define release %mkrel 3
-
-%define _requires_exceptions pear(\\(Horde.*\\|Text/Flowed.php\\|VFS.*\\))
 
 Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Version:	1.1.4
+Release:	1
 Summary:	The Horde Mobile Internet Messaging Program
 License:	GPL
 Group:		System/Servers
 URL:		http://www.horde.org/%{module}
-Source0:	ftp://ftp.horde.org/pub/%{module}/%{module}-h3-%{version}.tar.gz
+Source0:	ftp://ftp.horde.org:21/pub/mimp/mimp-h3-%{version}.tar.gz
 Requires(post):	rpm-helper
 Requires:	horde >= 3.0
 Requires:	php-imap
@@ -30,8 +26,6 @@ a cut down UI suitable for mobile phones and PDAs
 %build
 
 %install
-rm -rf %{buildroot}
-
 # apache configuration
 install -d -m 755 %{buildroot}%{_webappconfdir}
 cat > %{buildroot}%{_webappconfdir}/%{name}.conf <<EOF
@@ -175,5 +169,6 @@ fi
 * Fri Mar 07 2008 Colin Guthrie <cguthrie@mandriva.org> 1.0.2-1mdv2008.1
 + Revision: 181171
 - import horde-mimp
+
 
 
