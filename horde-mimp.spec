@@ -3,7 +3,7 @@
 
 Name:		%{name}
 Version:	1.1.4
-Release:	2
+Release:	3
 Summary:	The Horde Mobile Internet Messaging Program
 License:	GPL
 Group:		System/Servers
