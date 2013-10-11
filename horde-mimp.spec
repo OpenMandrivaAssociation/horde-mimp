@@ -1,9 +1,8 @@
 %define	module	mimp
-%define	name	horde-%{module}
 
-Name:		%{name}
+Name:		horde-%{module}
 Version:	1.1.4
-Release:	3
+Release:	4
 Summary:	The Horde Mobile Internet Messaging Program
 License:	GPL
 Group:		System/Servers
@@ -92,7 +91,6 @@ for file in `find %{buildroot}%{_datadir}/horde/%{module}/scripts`; do
 done
 
 %clean
-rm -rf %{buildroot}
 
 %post
 if [ $1 = 1 ]; then
@@ -100,13 +98,9 @@ if [ $1 = 1 ]; then
 	%create_ghostfile %{_sysconfdir}/horde/%{module}/conf.php apache apache 644
 	%create_ghostfile %{_sysconfdir}/horde/%{module}/conf.php.bak apache apache 644
 fi
-%if %mdkversion < 201010
-%_post_webapp
-%endif
 
 
 %files
-%defattr(-,root,root)
 %doc README COPYING docs
 %config(noreplace) %{_webappconfdir}/%{name}.conf
 %config(noreplace) %{_sysconfdir}/horde/registry.d/%{module}.php
