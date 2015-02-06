@@ -2,7 +2,7 @@
 
 Name:		horde-%{module}
 Version:	1.1.4
-Release:	4
+Release:	5
 Summary:	The Horde Mobile Internet Messaging Program
 License:	GPL
 Group:		System/Servers
