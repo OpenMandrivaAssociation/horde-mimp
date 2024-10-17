@@ -6,7 +6,7 @@ Release:	5
 Summary:	The Horde Mobile Internet Messaging Program
 License:	GPL
 Group:		System/Servers
-URL:		http://www.horde.org/%{module}
+URL:		https://www.horde.org/%{module}
 Source0:	ftp://ftp.horde.org:21/pub/mimp/mimp-h3-%{version}.tar.gz
 Requires(post):	rpm-helper
 Requires:	horde >= 3.0
